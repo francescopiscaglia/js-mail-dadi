@@ -5,7 +5,8 @@ let user_email;
 
 // 2. Analisi dati
 // dichiaro la variabile user_email con un prompt per chiedere all'utente
-user_email = prompt("Ciao, inserisci la tua email per accedere al gioco (tutto in minuscolo").toLowerCase();
+// user_email = prompt("Ciao, inserisci la tua email per accedere al gioco (tutto in minuscolo").toLowerCase();
+user_email = "si@gmail.com";
 
 // stampo la email inserita dall'utente
 console.log(user_email);
@@ -34,6 +35,9 @@ if (user_email.includes("@")) {
     //stampo che non è valida
     console.log("Email non valida, riprova");
 }
+
+let random_number = Math.floor(Math.random() * 6) + 1;
+console.log(random_number);
 
 
 // 4. Output
