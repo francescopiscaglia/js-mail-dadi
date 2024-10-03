@@ -5,8 +5,7 @@ let user_email;
 
 // 2. Analisi dati
 // dichiaro la variabile user_email con un prompt per chiedere all'utente
-// user_email = prompt("Ciao, inserisci la tua email per accedere al gioco (tutto in minuscolo").toLowerCase();
-user_email = "si@gmail.com";
+user_email = prompt("Ciao, inserisci la tua email per accedere al gioco (tutto in minuscolo").toLowerCase();
 
 // stampo la email inserita dall'utente
 console.log(user_email);
@@ -14,30 +13,40 @@ console.log(user_email);
 // creo una lista di email che possono accedere per fare il controllo
 let verify_email = ["si@gmail.com", "access@gmail.com"];
 
-// 3. Elaborazione codice
-// verifico se la email contiene il carattere @ per validare che sia una mail
-if (user_email.includes("@")) {
-    // stampo che è valida
-    console.log("Email valida");
 
-    // verifico se user_email è nella lista che può accedere al gioco
-    if (verify_email.includes(user_email)) {
-        // stampo il messaggio che può accedere
-        console.log("Puoi accedere al gioco");
-    
-        // altrimenti non può accedere
+// 3. Elaborazione codice
+// verifico se la email contiene il carattere @ e che sia inclusa nella lista
+if ((user_email.includes("@")) && (verify_email.includes(user_email))) {
+    // stampo che è valida e può accedere
+    console.log("Email valida, puoi accedere al gioco");
+
+    // genero un numero intero casuale da 1 o 6 per l'utente e per il pc
+    let user_random_number = Math.floor(Math.random() * 6) + 1;
+    let pc_random_number = Math.floor(Math.random() * 6) + 1;
+
+    // stampo i due numeri in console
+    console.log(user_random_number);
+    console.log(pc_random_number);
+
+    // verifico quale dei due è più grande
+    if (user_random_number < pc_random_number) {
+        // l'utente ha perso
+        console.log("Peccato... Hai perso :(");
+
+    } else if (user_random_number > pc_random_number) {
+        // l'utente ha vinto
+        console.log("Congratulazioni! Hai vinto ;)");
+
     } else {
-        // stampo il messaggio che non può accedere al gioco
-        console.log("Non puoi accedere al gioco");
+        // se sono uguali => pareggio
+        console.log("E' un pareggio :|");
     }
 
-} else {
+} else if (user_email.includes("@")) { // mail valida ma non è nella lista
+    // stampo il messaggio che non può accedere al gioco
+    console.log("L'email non è nella lista");
+
+} else if (verify_email.includes(user_email)){ // mail nella lista ma non valida
     //stampo che non è valida
     console.log("Email non valida, riprova");
-}
-
-let random_number = Math.floor(Math.random() * 6) + 1;
-console.log(random_number);
-
-
-// 4. Output
+};
