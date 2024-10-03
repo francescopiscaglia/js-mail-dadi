@@ -14,16 +14,16 @@ console.log(user_email);
 let verify_email = ["si@gmail.com", "access@gmail.com"];
 
 // 3. Elaborazione codice
-// conditional block
 // verifico se user_email è nella lista che può accedere al gioco
-// stampo il messaggio che può accedere
+if (verify_email.includes(user_email)) {
+    // stampo il messaggio che può accedere
+    console.log("Puoi accedere al gioco");
 
-// altrimenti non può accedere
-// stampo il messaggio che non può accedere al gioco
-
-
-// array per i numeri da 1 a 6
-// prompt
+    // altrimenti non può accedere
+} else {
+    // stampo il messaggio che non può accedere al gioco
+    console.log("Non puoi accedere al gioco");
+}
 
 
 // 4. Output
