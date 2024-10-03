@@ -1,10 +1,14 @@
 // 1. Preparazione
 // creo una variabile user_email per la mail dell'utente
+let user_email;
 
 
 // 2. Analisi dati
 // dichiaro la variabile user_email con un prompt per chiedere all'utente
+user_email = prompt("Ciao, inserisci la tua email per accedere al gioco");
 
+// stampo la email inserita dall'utente
+console.log(user_email);
 
 // 3. Elaborazione codice
 // conditional block
