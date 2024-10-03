@@ -11,12 +11,12 @@ user_email = prompt("Ciao, inserisci la tua email per accedere al gioco (tutto i
 console.log(user_email);
 
 // creo una lista di email che possono accedere per fare il controllo
-let verify_email = ["si@gmail.com", "access@gmail.com"];
+let authorized_emails = ["si@gmail.com", "access@gmail.com"];
 
 
 // 3. Elaborazione codice
 // verifico se la email contiene il carattere @ e che sia inclusa nella lista
-if ((user_email.includes("@")) && (verify_email.includes(user_email))) {
+if ((user_email.includes("@")) && (authorized_emails.includes(user_email))) {
     // stampo che è valida e può accedere
     console.log("Email valida, puoi accedere al gioco");
 
@@ -42,11 +42,11 @@ if ((user_email.includes("@")) && (verify_email.includes(user_email))) {
         console.log("E' un pareggio :|");
     }
 
-} else if (user_email.includes("@")) { // mail valida ma non è nella lista
-    // stampo il messaggio che non può accedere al gioco
+} else if (user_email.includes("@")) { 
+    // mail valida ma non è nella lista
     console.log("L'email non è nella lista");
 
-} else if (verify_email.includes(user_email)){ // mail nella lista ma non valida
-    //stampo che non è valida
-    console.log("Email non valida, riprova");
+} else { 
+    // mail nella lista ma non valida
+    console.log("Email non valida, riprova. Deve contenere @");
 };
