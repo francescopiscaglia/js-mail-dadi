@@ -11,7 +11,7 @@ user_email = prompt("Ciao, inserisci la tua email per accedere al gioco (tutto i
 console.log(user_email);
 
 // creo una lista di email che possono accedere per fare il controllo
-let authorized_emails = ["si@gmail.com", "access@gmail.com"];
+let authorized_emails = ["si@gmail.com", "access@gmail.com", "youcanaccess@gmail.com"];
 
 
 // 3. Elaborazione codice
