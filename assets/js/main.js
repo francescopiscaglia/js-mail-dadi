@@ -2,6 +2,9 @@
 // creo una variabile user_email per la mail dell'utente
 let user_email;
 
+// creo una variabile per le email che possono accedere
+let authorized_emails;
+
 
 // 2. Analisi dati
 // dichiaro la variabile user_email con un prompt per chiedere all'utente
@@ -10,8 +13,12 @@ user_email = prompt("Ciao, inserisci la tua email per accedere al gioco (tutto i
 // stampo la email inserita dall'utente
 console.log(user_email);
 
-// creo una lista di email che possono accedere per fare il controllo
-let authorized_emails = ["si@gmail.com", "access@gmail.com", "youcanaccess@gmail.com"];
+// dichiaro la lista di email che possono accedere per fare il controllo
+authorized_emails = [
+    "si@gmail.com", 
+    "access@gmail.com", 
+    "youcanaccess@gmail.com"
+];
 
 
 // 3. Elaborazione codice
@@ -50,3 +57,6 @@ if ((user_email.includes("@")) && (authorized_emails.includes(user_email))) {
     // mail nella lista ma non valida
     console.log("Email non valida, riprova. Deve contenere @");
 };
+
+
+// Secondo modo con il ciclo for
