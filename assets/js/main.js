@@ -32,21 +32,20 @@ if ((user_email.includes("@")) && (authorized_emails.includes(user_email))) {
     let pc_random_number = Math.floor(Math.random() * 6) + 1;
 
     // stampo i due numeri in console
-    console.log(user_random_number);
-    console.log(pc_random_number);
+    console.log(user_random_number, pc_random_number);
 
     // verifico quale dei due è più grande
     if (user_random_number < pc_random_number) {
         // l'utente ha perso
-        console.log("Peccato... Hai perso :(");
+        alert("Peccato... Hai perso :(");
 
     } else if (user_random_number > pc_random_number) {
         // l'utente ha vinto
-        console.log("Congratulazioni! Hai vinto ;)");
+        alert("Congratulazioni! Hai vinto ;)");
 
     } else {
         // se sono uguali => pareggio
-        console.log("E' un pareggio :|");
+        alert("E' un pareggio :|");
     }
 
 } else if (user_email.includes("@")) { 
@@ -55,7 +54,7 @@ if ((user_email.includes("@")) && (authorized_emails.includes(user_email))) {
 
 } else { 
     // mail nella lista ma non valida
-    console.log("Email non valida, riprova. Deve contenere @");
+    alert("Email non valida, riprova. Deve contenere @");
 };
 
 
